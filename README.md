@@ -8,7 +8,7 @@ Um projeto em Python que automatiza o preenchimento de formulários HTML utiliza
 
 ## Funcionalidades
 
-  - **Carregamento de Dados**:
+- **Carregamento de Dados**:
   - Utiliza o Pandas para a leitura da planilha Excel (arquivo `cadastros_100.xlsx`), removendo linhas vazias, para obter os registros que serão utilizados.
 
 - **Automatização do Formulário**:  
