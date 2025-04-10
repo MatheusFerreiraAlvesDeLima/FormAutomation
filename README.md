@@ -8,8 +8,8 @@ Um projeto em Python que automatiza o preenchimento de formulários HTML utiliza
 
 ## Funcionalidades
 
-  - **Carregamento de Dados**:  
-  Lê os dados de uma planilha Excel (arquivo `cadastros_100.xlsx`), removendo linhas vazias, para obter os registros que serão utilizados.
+  - **Carregamento de Dados**:
+  - Ultiliza o Pandas para a leitura de dados da planilha Excel (arquivo `cadastros_100.xlsx`), removendo linhas vazias, para obter os registros que serão utilizados.
 
 - **Automatização do Formulário**:  
   - Abre um arquivo HTML (`index.html`) em um navegador padrão.
@@ -20,9 +20,6 @@ Um projeto em Python que automatiza o preenchimento de formulários HTML utiliza
   - Barra de progresso que indica o percentual de finalização.
   - Mensagens de status e botão de finalização.
   
-- **Execução Paralela**:  
-  A automação é realizada em uma thread separada, permitindo que a interface permaneça responsiva durante o processo.
-
 ## Tecnologias Utilizadas
 
 - **Python**
