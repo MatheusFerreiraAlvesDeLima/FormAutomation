@@ -1,10 +1,14 @@
+# Vídeo rápido do projeto 
+  
+  - **Google drive**:https://drive.google.com/file/d/1KFt-Zh9S63JNGfKVC7bPOnOPcZvzlzqd/view?usp=drive_link
+    
 # Automatizador de Cadastros
 
 Um projeto em Python que automatiza o preenchimento de formulários HTML utilizando dados obtidos de uma planilha Excel. A automação é feita com o auxílio de **pyautogui** para interação com a tela e **pandas** para manipulação dos dados, enquanto uma interface gráfica (GUI) construída com **customtkinter** exibe o progresso da operação.
 
 ## Funcionalidades
 
-- **Carregamento de Dados**:  
+  - **Carregamento de Dados**:  
   Lê os dados de uma planilha Excel (arquivo `cadastros_100.xlsx`), removendo linhas vazias, para obter os registros que serão utilizados.
 
 - **Automatização do Formulário**:  
@@ -29,7 +33,7 @@ Um projeto em Python que automatiza o preenchimento de formulários HTML utiliza
 
 ## Pré-requisitos
 
-- Ter o Python 3.x instalado.
+- Ter o Python instalado.
 - Instalar as seguintes bibliotecas, preferencialmente em um ambiente virtual:
   - pandas
   - pyautogui
