@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            padding: 40px 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        h2, h3 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: darkblue;
+        }
+
+        #contador {
+            margin-top: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #resultado p {
+            margin: 8px 0;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+
+            input, button {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulário de Cadastro</h2>
+        <form id="cadastroForm">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="numero" placeholder="Número" required>
+            <input type="number" id="idade" placeholder="Idade" required>
+            <input type="text" id="endereco" placeholder="Endereço" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p id="contador">Registros cadastrados: 0</p>
+    </div>
+
+    <div id="resultado" class="container" style="display: none;">
+        <h3>Dados Cadastrados:</h3>
+        <p><strong>Nome:</strong> <span id="resNome"></span></p>
+        <p><strong>Email:</strong> <span id="resEmail"></span></p>
+        <p><strong>Número:</strong> <span id="resNumero"></span></p>
+        <p><strong>Idade:</strong> <span id="resIdade"></span></p>
+        <p><strong>Endereço:</strong> <span id="resEndereco"></span></p>
+    </div>
+
+    <script>
+        let contador = 0;
+        document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("resNome").textContent = document.getElementById("nome").value;
+            document.getElementById("resEmail").textContent = document.getElementById("email").value;
+            document.getElementById("resNumero").textContent = document.getElementById("numero").value;
+            document.getElementById("resIdade").textContent = document.getElementById("idade").value;
+            document.getElementById("resEndereco").textContent = document.getElementById("endereco").value;
+            document.getElementById("resultado").style.display = "block";
+
+            contador++;
+            document.getElementById("contador").textContent = "Registros cadastrados: " + contador;
+            document.getElementById("cadastroForm").reset();
+        });
+    </script>
+</body>
+</html>
